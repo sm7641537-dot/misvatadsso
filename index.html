@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — ISPMIS style (demo)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="left">
+      <div class="logo-box">LOGO</div>
+      <h2>Integrated Social Protection<br/>Management Information System (ISPMIS)</h2>
+      <h3 class="notice-title">Notice Board</h3>
+      <p class="notice">
+        No One's ID and password is asked from the MIS admin of the Department of Social Services (DSS) without solving your problem. Beware of cheaters. Please do not share your password with anyone and do not save it in your browser.
+      </p>
+    </div>
+
+    <div class="right">
+      <div class="card">
+        <h2 class="card-title">Login</h2>
+        <form id="loginForm">
+          <label>Username
+            <input type="text" id="username" name="username" placeholder="Username" required>
+          </label>
+
+          <label>Password
+            <div class="password-row">
+              <input type="password" id="password" name="password" placeholder="Password" required>
+              <button type="button" id="togglePwd" class="eye">👁️</button>
+            </div>
+          </label>
+
+          <label class="captcha-label">ক্যাপচা সম্পূর্ণ করুন</label>
+          <div class="captcha-row">
+            <canvas id="captchaCanvas" width="120" height="40"></canvas>
+            <button type="button" id="refreshCaptcha" title="Refresh">⟳</button>
+            <input type="text" id="captchaInput" name="captcha" placeholder="ক্যাপচা লিখুন" required>
+          </div>
+
+          <div class="actions">
+            <a href="#" class="forgot">Forgot Password?</a>
+            <button type="submit" class="btn-login">LOGIN</button>
+          </div>
+
+          <div id="msg" class="msg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
