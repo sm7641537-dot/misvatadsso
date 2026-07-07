@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>পরবর্তী পাতা</title>
+  <style>
+    body{font-family:Arial, sans-serif;margin:20px;background:#f7f9fb}
+    .box{max-width:1000px;margin:0 auto;background:#fff;padding:20px;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{border:2px solid #333;padding:8px;text-align:center;font-size:14px}
+    th{background:#eee}
+    .logout{float:right}
+    @media (max-width:800px){table{font-size:12px}}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <button id="logoutBtn" style="float:right">Logout</button>
+    <h2>আপনার তালিকা (ডেমো)</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>অ্যাকাউন্ট নং</th>
+          <th>পরিমান</th>
+          <th>আইডি নং</th>
+          <th>কিস্তি</th>
+          <th>অর্থবছর</th>
+          <th>যাচাইকৃত</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1791303484</td><td>৫২০০</td><td>৬৩৮০৫৫২৩৮৩</td><td>৪র্থ কিস্তি</td><td>২৫-২৬</td><td>যাচাইকৃত</td></tr>
+        <tr><td>1918408906</td><td>৫২০০</td><td>৭০২৯৭৫৩২৭৯</td><td>৪র্থ কিস্তি</td><td>২৫-২৬</td><td>যাচাইকৃত</td></tr>
+        <tr><td>1365047948</td><td>৫২০০</td><td>৮৩২৭৯১৩১৮</td><td>৪র্থ কিস্তি</td><td>২৫-২৬</td><td>যাচাইকৃত</td></tr>
+        <tr><td>1791303078</td><td>৫২০০</td><td>৭৪২৬৯২২৯৩</td><td>৪র্থ কিস্তি</td><td>২৫-২৬</td><td>যাচাইকৃত</td></tr>
+        <tr><td>1618608707</td><td>৫২০০</td><td>৯১৩৬৯৪২৮৭</td><td>৪র্থ কিস্তি</td><td>২৫-২৬</td><td>যাচাইকৃত</td></tr>
+        <tr><td>1470363125</td><td>৫২০০</td><td>৭০৩০৭৩২৪৮</td><td>৪র্থ কিস্তি</td><td>২৫-২৬</td><td>যাচাইকৃত</td></tr>
+        <tr><td>1586542408</td><td>৫২০০</td><td>৯১৫৬৪৮২৪৮</td><td>৪র্থ কিস্তি</td><td>২৫-২৬</td><td>যাচাইকৃত</td></tr>
+        <tr><td>1791301810</td><td>৫২০০</td><td>৭০২৩৪২৬৪১</td><td>৪র্থ কিস্তি</td><td>২৫-২৬</td><td>যাচাইকৃত</td></tr>
+        <tr><td>1383013270</td><td>৫২০০</td><td>৬৭৩০৭২১৩৪</td><td>৪র্থ কিস্তি</td><td>২৫-২৬</td><td>যাচাইকৃত</td></tr>
+        <tr><td>1639728079</td><td>৫২০০</td><td>৫৭০৭৪৩২২১</td><td>৪র্থ কিস্তি</td><td>২৫-২৬</td><td>যাচাইকৃত</td></tr>
+        <!-- আরো সারি চাইলে এখানে যোগ করুন -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', async ()=>{
+      await fetch('/logout', { method:'POST' });
+      window.location.href = '/';
+    });
+  </script>
+</body>
+</html>
